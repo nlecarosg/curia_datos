@@ -23,7 +23,7 @@ jobs:
         run: python -m pip install "jsonschema==4.26.0"
 
       - name: Validar la serie publicada
-        run: python scripts/validar.py datos/ine/ir2023
+        run: python scripts/validar.py .
 
-      - name: Probar que una salida mala no borra lo publicado
+      - name: Probar que una salida mala no altera la serie buena
         run: python scripts/probar.py

@@ -1,2 +1,2 @@
 # El cuerpo crudo se guarda byte a byte: el hash lo identifica.
-datos/**/crudo/** binary
+raw/** binary

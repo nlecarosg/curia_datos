@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Valida un directorio de datos contra el esquema de la observación.
+"""Valida la salida de curia_maxima en la raíz de este repositorio.
 
 Uso:
-    python scripts/validar.py datos/ine/ir2023
+    python scripts/validar.py .
 """
 
 from __future__ import annotations
@@ -13,10 +13,12 @@ import sys
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
-from jsonschema.exceptions import SchemaError, ValidationError
+from jsonschema.exceptions import SchemaError
+from referencing import Registry, Resource
 
 RAIZ = Path(__file__).resolve().parents[1]
-ESQUEMA_RUTA = RAIZ / "esquema" / "observacion.schema.json"
+ESQUEMA_OBSERVACION = RAIZ / "esquema" / "observacion.schema.json"
+ESQUEMA_SERIE = RAIZ / "esquema" / "serie.schema.json"
 
 
 class ValidacionError(Exception):
@@ -40,96 +42,83 @@ def _cargar_json(path: Path):
         raise ValidacionError(f"{path.name} no es JSON: {exc.msg}") from exc
 
 
-def validar(directorio: Path) -> dict:
-    """Revisa la serie, el historial y los cuerpos. Devuelve lo leído."""
-    directorio = Path(directorio)
-    if not directorio.is_dir():
-        raise ValidacionError(f"no existe el directorio {directorio}")
-
+def _validador_serie() -> Draft202012Validator:
     try:
-        esquema = json.loads(ESQUEMA_RUTA.read_text(encoding="utf-8"))
-        Draft202012Validator.check_schema(esquema)
+        observacion = json.loads(ESQUEMA_OBSERVACION.read_text(encoding="utf-8"))
+        serie = json.loads(ESQUEMA_SERIE.read_text(encoding="utf-8"))
+        Draft202012Validator.check_schema(observacion)
+        Draft202012Validator.check_schema(serie)
     except (OSError, json.JSONDecodeError, SchemaError) as exc:
         raise ValidacionError(f"el esquema no se puede usar: {exc}") from exc
+    registry = Registry().with_resources(
+        [
+            (observacion["$id"], Resource.from_contents(observacion)),
+            (serie["$id"], Resource.from_contents(serie)),
+        ]
+    )
+    return Draft202012Validator(serie, registry=registry)
 
-    validador = Draft202012Validator(esquema)
-    estados = set(esquema["properties"]["estado"]["enum"])
 
-    crudo = directorio / "crudo"
-    if not crudo.is_dir():
-        raise ValidacionError("falta el directorio crudo/")
-    archivos = [path for path in crudo.iterdir() if path.is_file() and not path.name.startswith(".")]
+def validar(directorio: Path) -> dict:
+    """Revisa cada serie y el cuerpo crudo de la última captura vigente."""
+    directorio = Path(directorio)
+    series_dir = directorio / "series"
+    if not series_dir.is_dir():
+        raise ValidacionError("falta el directorio series/")
+    archivos = sorted(
+        path for path in series_dir.glob("*.json") if path.is_file() and not path.name.startswith(".")
+    )
     if not archivos:
-        raise ValidacionError("crudo/ no tiene ningún cuerpo")
-    hashes: dict[str, Path] = {}
+        raise ValidacionError("series/ no tiene ninguna serie")
+
+    validador = _validador_serie()
+    documentos = []
+    cuerpos = 0
     for path in archivos:
-        if path.stat().st_size == 0:
-            raise ValidacionError(f"el cuerpo {path.name} está vacío")
-        digest = _sha256(path)
-        hashes.setdefault(digest, path)
+        documento = _cargar_json(path)
+        if not isinstance(documento, dict):
+            raise ValidacionError(f"{path.name} no es un objeto")
+        errores = sorted(
+            validador.iter_errors(documento),
+            key=lambda error: ([str(parte) for parte in error.absolute_path], error.message),
+        )
+        if errores:
+            error = errores[0]
+            camino = ".".join(str(parte) for parte in error.absolute_path) or "raíz"
+            raise ValidacionError(f"{path.name} ({camino}): {error.message}")
 
-    serie = _cargar_json(directorio / "serie.json")
-    if not isinstance(serie, list) or not serie:
-        raise ValidacionError("serie.json debe ser una lista con observaciones")
+        series_id = documento["series_id"]
+        if path.stem != series_id:
+            raise ValidacionError(f"{path.name} no se llama como su series_id ({series_id})")
 
-    historial_path = directorio / "historial.jsonl"
-    if not historial_path.is_file():
-        raise ValidacionError("falta historial.jsonl")
-    lineas = []
-    for numero, linea in enumerate(historial_path.read_text(encoding="utf-8").splitlines(), start=1):
-        if not linea.strip():
-            continue
-        try:
-            captura = json.loads(linea)
-        except json.JSONDecodeError as exc:
-            raise ValidacionError(f"historial.jsonl línea {numero} no es JSON: {exc.msg}") from exc
-        if not isinstance(captura, dict):
-            raise ValidacionError(f"historial.jsonl línea {numero} no es un objeto")
-        lineas.append(captura)
-    if not lineas:
-        raise ValidacionError("historial.jsonl no tiene capturas")
+        observaciones = documento["observations"]
+        cuerpo = directorio / "raw" / f"{series_id}.body"
+        if observaciones:
+            if not cuerpo.is_file():
+                raise ValidacionError(f"falta el cuerpo crudo raw/{series_id}.body")
+            if cuerpo.stat().st_size == 0:
+                raise ValidacionError(f"el cuerpo raw/{series_id}.body está vacío")
+            digest = f"sha256:{_sha256(cuerpo)}"
+            cuerpos += 1
+            coinciden = [obs for obs in observaciones if obs["raw_hash"] == digest]
+            if not coinciden:
+                raise ValidacionError(
+                    f"{path.name}: ninguna observación tiene el hash del cuerpo {digest}"
+                )
+            if documento["status"] == "vigente":
+                de_esta_captura = [
+                    obs for obs in observaciones if obs["captured_at"] == documento["captured_at"]
+                ]
+                if not de_esta_captura:
+                    raise ValidacionError(f"{path.name}: la captura vigente no publicó observaciones")
+                distintas = [obs for obs in de_esta_captura if obs["raw_hash"] != digest]
+                if distintas:
+                    raise ValidacionError(
+                        f"{path.name}: el hash de la captura vigente no es el del cuerpo crudo"
+                    )
+        documentos.append(documento)
 
-    def revisar_observacion(obs, donde: str) -> None:
-        if not isinstance(obs, dict):
-            raise ValidacionError(f"{donde} no es un objeto")
-        try:
-            validador.validate(obs)
-        except ValidationError as exc:
-            camino = ".".join(str(parte) for parte in exc.absolute_path)
-            detalle = f"{camino}: {exc.message}" if camino else exc.message
-            raise ValidacionError(f"{donde}: {detalle}") from exc
-        digest = obs["hash_crudo"].removeprefix("sha256:")
-        if digest not in hashes:
-            raise ValidacionError(f"{donde}: no está el cuerpo {obs['hash_crudo']}")
-
-    for indice, obs in enumerate(serie):
-        revisar_observacion(obs, f"serie[{indice}]")
-
-    for numero, captura in enumerate(lineas, start=1):
-        donde = f"historial línea {numero}"
-        for campo in ("fecha_captura", "hash_crudo", "estado", "observaciones"):
-            if campo not in captura:
-                raise ValidacionError(f"{donde}: falta {campo}")
-        if captura["estado"] not in estados:
-            raise ValidacionError(f"{donde}: estado desconocido")
-        if not isinstance(captura["observaciones"], list) or not captura["observaciones"]:
-            raise ValidacionError(f"{donde}: observaciones debe tener elementos")
-        digest = str(captura["hash_crudo"]).removeprefix("sha256:")
-        if digest not in hashes:
-            raise ValidacionError(f"{donde}: no está el cuerpo {captura['hash_crudo']}")
-        for indice, obs in enumerate(captura["observaciones"]):
-            revisar_observacion(obs, f"{donde} observación {indice}")
-            if obs["fecha_captura"] != captura["fecha_captura"]:
-                raise ValidacionError(f"{donde} observación {indice}: la fecha de captura no coincide")
-            if obs["hash_crudo"] != captura["hash_crudo"]:
-                raise ValidacionError(f"{donde} observación {indice}: el hash no coincide")
-            if obs["estado"] != captura["estado"]:
-                raise ValidacionError(f"{donde} observación {indice}: el estado no coincide")
-
-    if lineas[-1]["observaciones"] != serie:
-        raise ValidacionError("serie.json no es la última captura del historial")
-
-    return {"serie": serie, "historial": lineas, "hashes": hashes}
+    return {"series": documentos, "cuerpos": cuerpos}
 
 
 def main(argv: list[str]) -> int:
@@ -141,18 +130,10 @@ def main(argv: list[str]) -> int:
     except ValidacionError as exc:
         print(f"validación fallida: {exc}", file=sys.stderr)
         return 1
-    def cantidad(n: int, uno: str, varios: str) -> str:
-        return f"{n} {uno if n == 1 else varios}"
-
+    observaciones = sum(len(serie["observations"]) for serie in info["series"])
     print(
-        "ok: "
-        + ", ".join(
-            [
-                cantidad(len(info["serie"]), "observación", "observaciones"),
-                cantidad(len(info["historial"]), "captura", "capturas"),
-                cantidad(len(info["hashes"]), "cuerpo", "cuerpos"),
-            ]
-        )
+        f"ok: {len(info['series'])} serie(s), {observaciones} observaciones, "
+        f"{info['cuerpos']} cuerpo(s)"
     )
     return 0
 
