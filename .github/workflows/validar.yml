@@ -1,0 +1,29 @@
+name: Validar datos
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar el validador
+        run: python -m pip install "jsonschema==4.26.0"
+
+      - name: Validar la serie publicada
+        run: python scripts/validar.py datos/ine/ir2023
+
+      - name: Probar que una salida mala no borra lo publicado
+        run: python scripts/probar.py

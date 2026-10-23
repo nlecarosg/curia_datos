@@ -1,0 +1,91 @@
+name: Actualizar datos
+
+# Una vez al día y a mano. Instala el recolector de curia_maxima, lo corre
+# en un directorio aparte y solo entonces toca los datos de este repositorio.
+# Si la fuente no responde, el paquete no se puede instalar o la salida no
+# calza con el esquema, el trabajo termina en error y los archivos publicados
+# quedan como estaban.
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Commit de 40 hexadecimales o tag que empiece con v.
+      # curia_maxima sigue privado: no hay revisión pública que fijar.
+      # Sustituir este valor cuando el repositorio sea público.
+      CURIA_MAXIMA_REV: FIJAR_COMMIT_O_TAG
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Comprobar que el recolector es público
+        run: |
+          set -euo pipefail
+          codigo=$(curl -sS -o /dev/null -w "%{http_code}" \
+            "https://github.com/nlecarosg/curia_maxima")
+          if [ "$codigo" != "200" ]; then
+            echo "curia_maxima no está público (HTTP ${codigo})."
+            echo "No se instala el recolector y no se modifican los datos."
+            echo "Esta acción no usa secretos. Cuando el repositorio sea público, el paso siguiente podrá instalarlo con pip desde git."
+            exit 1
+          fi
+
+      - name: Comprobar que la revisión está fijada
+        run: |
+          set -euo pipefail
+          if [[ "$CURIA_MAXIMA_REV" =~ ^[0-9a-f]{40}$ ]]; then
+            exit 0
+          fi
+          if [[ "$CURIA_MAXIMA_REV" =~ ^v[0-9A-Za-z._-]+$ ]]; then
+            exit 0
+          fi
+          echo "CURIA_MAXIMA_REV=${CURIA_MAXIMA_REV} no es un commit ni un tag."
+          echo "Fijar un SHA de 40 hexadecimales o un tag v… en .github/workflows/actualizar.yml."
+          echo "No se modifica ningún dato."
+          exit 1
+
+      - name: Instalar el recolector fijado
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install "git+https://github.com/nlecarosg/curia_maxima.git@${CURIA_MAXIMA_REV}"
+
+      - name: Recolectar fuera de los datos publicados
+        run: |
+          set -euo pipefail
+          python -m curia_maxima --output "${RUNNER_TEMP}/salida"
+
+      - name: Validar y publicar solo si el cuerpo es nuevo
+        run: |
+          set -euo pipefail
+          python -m pip install "jsonschema==4.26.0"
+          python scripts/publicar.py datos/ine/ir2023 "${RUNNER_TEMP}/salida"
+
+      - name: Commit si hay datos nuevos
+        run: |
+          set -euo pipefail
+          git add -- datos/ine/ir2023
+          if git diff --cached --quiet; then
+            echo "Sin datos nuevos. No se hace commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "datos: actualiza el índice de remuneraciones IR2023 del INE"
+          git push
