@@ -1,0 +1,590 @@
+{
+  "schema_version": "1",
+  "series_id": "ine.ir2023.nacional.indice",
+  "indicator": {
+    "code": "IR2023",
+    "name": "Índice nominal de remuneraciones (base 2023 = 100)"
+  },
+  "unit": "índice (base 2023=100)",
+  "source": {
+    "organism": "Instituto Nacional de Estadísticas (INE)",
+    "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+  },
+  "status": "vigente",
+  "error": null,
+  "captured_at": "2026-10-23T21:07:22Z",
+  "observations": [
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 98.01,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-01-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 97.47,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-02-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 98.07,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-03-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 98.73,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-04-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 98.94,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-05-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 99.89,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-06-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 100.29,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-07-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 100.34,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-08-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 101.83,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-09-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 101.52,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-10-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 101.58,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-11-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 103.3,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2023-12-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 104.08,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-01-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 103.77,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-02-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 104.82,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-03-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 105.27,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-04-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 105.7,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-05-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 106.97,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-06-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 108.68,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-07-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 109.1,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-08-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 109.84,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-09-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 109.97,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-10-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 110.24,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-11-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 111.01,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2024-12-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 112.8,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-01-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 112.91,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-02-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 113.48,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-03-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 113.85,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-04-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 114.22,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-05-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 115.0,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-06-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 115.57,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-07-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 115.79,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-08-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 116.28,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-09-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 116.5,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-10-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 116.86,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-11-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 117.74,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2025-12-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 118.35,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-01-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 118.55,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-02-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 119.33,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-03-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 120.29,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-04-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 122.6,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-05-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 123.91,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-06-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 124.59,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-07-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    },
+    {
+      "series_id": "ine.ir2023.nacional.indice",
+      "value": 124.64,
+      "unit": "índice (base 2023=100)",
+      "source": {
+        "organism": "Instituto Nacional de Estadísticas (INE)",
+        "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
+      },
+      "data_date": "2026-08-01",
+      "captured_at": "2026-10-23T21:07:22Z",
+      "raw_hash": "sha256:acb0b386d5e24986a78150f128f6a0e1692de4e327e5942a70ffb577cbe89b89",
+      "status": "vigente"
+    }
+  ]
+}

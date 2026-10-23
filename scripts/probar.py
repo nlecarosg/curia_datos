@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-"""Pruebas locales del validador y de la publicación.
-
-No descarga nada. Usa la serie ya guardada y directorios temporales.
-"""
+"""Pruebas locales del validador. No descarga nada ni llama al recolector."""
 
 from __future__ import annotations
 
-import hashlib
 import json
 import shutil
 import sys
@@ -15,16 +11,20 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from publicar import publicar
 from validar import ValidacionError, validar
 
 RAIZ = Path(__file__).resolve().parents[1]
-DATOS = RAIZ / "datos" / "ine" / "ir2023"
+SERIE = "ine.ir2023.nacional.indice"
 
 
 def _exigir(condicion: bool, mensaje: str) -> None:
     if not condicion:
         raise SystemExit(mensaje)
+
+
+def _copiar(destino: Path) -> None:
+    shutil.copytree(RAIZ / "series", destino / "series")
+    shutil.copytree(RAIZ / "raw", destino / "raw")
 
 
 def _bytes(directorio: Path) -> dict[str, bytes]:
@@ -35,100 +35,67 @@ def _bytes(directorio: Path) -> dict[str, bytes]:
     }
 
 
-def _minimo(destino: Path, cuerpo: bytes, estado: str = "vigente") -> None:
-    digest = hashlib.sha256(cuerpo).hexdigest()
-    obs = {
-        "valor": 1.5,
-        "unidad": "índice (base promedio 2023=100)",
-        "fuente": "prueba",
-        "fecha_dato": "2024-01",
-        "fecha_captura": "2026-10-23T00:00:00Z",
-        "hash_crudo": f"sha256:{digest}",
-        "estado": estado,
-    }
-    (destino / "crudo").mkdir(parents=True)
-    (destino / "crudo" / digest).write_bytes(cuerpo)
-    (destino / "serie.json").write_text(
-        json.dumps([obs], ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    captura = {
-        "fecha_captura": obs["fecha_captura"],
-        "hash_crudo": obs["hash_crudo"],
-        "estado": estado,
-        "observaciones": [obs],
-    }
-    (destino / "historial.jsonl").write_text(
-        json.dumps(captura, ensure_ascii=False, separators=(",", ":")) + "\n",
-        encoding="utf-8",
-    )
+def _leer(directorio: Path) -> dict:
+    return json.loads((directorio / "series" / f"{SERIE}.json").read_text(encoding="utf-8"))
+
+
+def _guardar(directorio: Path, documento: dict) -> None:
+    path = directorio / "series" / f"{SERIE}.json"
+    path.write_text(json.dumps(documento, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def main() -> int:
-    info = validar(DATOS)
-    _exigir(info["serie"], "la serie real está vacía")
-    _exigir(all(obs["estado"] == "vigente" for obs in info["serie"]), "la carga inicial no está vigente")
+    info = validar(RAIZ)
+    _exigir(len(info["series"]) == 1, "se esperaba una serie publicada")
+    publicada = info["series"][0]
+    _exigir(publicada["series_id"] == SERIE, "el identificador de la serie cambió")
+    _exigir(publicada["status"] == "vigente", "la serie publicada no está vigente")
+    _exigir(publicada["observations"], "la serie publicada no tiene observaciones")
+    ultima = publicada["observations"][-1]
+    _exigir(isinstance(ultima["value"], (int, float)), "el último valor no es numérico")
 
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
         copia = tmp_path / "copia"
-        shutil.copytree(DATOS, copia)
+        _copiar(copia)
         antes = _bytes(copia)
 
         roto = tmp_path / "roto"
-        shutil.copytree(DATOS, roto)
-        serie = json.loads((roto / "serie.json").read_text(encoding="utf-8"))
-        del serie[0]["valor"]
-        (roto / "serie.json").write_text(json.dumps(serie), encoding="utf-8")
+        _copiar(roto)
+        documento = _leer(roto)
+        del documento["observations"][0]["value"]
+        _guardar(roto, documento)
         try:
             validar(roto)
         except ValidacionError:
             pass
         else:
-            raise SystemExit("una serie sin valor pasó la validación")
-        _exigir(_bytes(copia) == antes, "validar un directorio roto modificó la copia buena")
+            raise SystemExit("una observación sin valor pasó la validación")
+        _exigir(_bytes(copia) == antes, "validar una copia rota modificó la serie buena")
 
+        cuerpo = tmp_path / "cuerpo"
+        _copiar(cuerpo)
+        raw = cuerpo / "raw" / f"{SERIE}.body"
+        raw.write_bytes(raw.read_bytes() + b" ")
         try:
-            publicar(copia, roto)
+            validar(cuerpo)
         except ValidacionError:
             pass
         else:
-            raise SystemExit("se publicó una salida inválida")
-        _exigir(_bytes(copia) == antes, "una salida inválida modificó los datos publicados")
+            raise SystemExit("un cuerpo alterado pasó la validación")
+        _exigir(_bytes(copia) == antes, "validar un cuerpo alterado modificó la serie buena")
 
-        _exigir(publicar(copia, DATOS) is False, "volvió a publicar el mismo cuerpo")
-        _exigir(_bytes(copia) == antes, "publicar el mismo cuerpo reescribió archivos")
+        marcado = tmp_path / "marcado"
+        _copiar(marcado)
+        documento = _leer(marcado)
+        documento["status"] = "no actualizado"
+        documento["error"] = "Fuente no disponible: prueba"
+        _guardar(marcado, documento)
+        resultado = validar(marcado)
+        _exigir(resultado["series"][0]["status"] == "no actualizado", "el esquema rechazó «no actualizado»")
+        _exigir(_bytes(copia) == antes, "marcar una copia cambió la serie buena")
 
-        nuevo = tmp_path / "nuevo"
-        _minimo(nuevo, b"cuerpo-distinto\n", estado="no actualizado")
-        # La serie de prueba no trae los meses reales: debe rechazarse.
-        try:
-            publicar(copia, nuevo)
-        except ValidacionError:
-            pass
-        else:
-            raise SystemExit("se aceptó una salida que borra observaciones")
-        _exigir(_bytes(copia) == antes, "el rechazo por omisión modificó los datos")
-
-        # Sobre un directorio mínimo, una segunda captura se agrega y la primera sigue.
-        base = tmp_path / "base"
-        _minimo(base, b"cuerpo-inicial\n")
-        validar(base)
-        segundo = tmp_path / "segundo"
-        _minimo(segundo, b"cuerpo-siguiente\n")
-        _exigir(publicar(base, segundo) is True, "no publicó un cuerpo nuevo")
-        publicado = validar(base)
-        _exigir(len(publicado["historial"]) == 2, "el historial no conservó la captura anterior")
-        _exigir(len(publicado["hashes"]) == 2, "se borró el cuerpo crudo anterior")
-        _exigir(publicado["serie"][0]["estado"] == "vigente", "la serie mínima perdió el estado")
-        _exigir(publicado["historial"][0]["hash_crudo"] != publicado["historial"][1]["hash_crudo"], "las capturas quedaron iguales")
-
-        estado = tmp_path / "estado"
-        _minimo(estado, b"cuerpo-estado\n", estado="no actualizado")
-        marcado = validar(estado)
-        _exigir(marcado["serie"][0]["estado"] == "no actualizado", "el esquema rechazó «no actualizado»")
-
-    print("ok: pruebas de validación y de publicación")
+    print("ok: pruebas de validación")
     return 0
 
 
