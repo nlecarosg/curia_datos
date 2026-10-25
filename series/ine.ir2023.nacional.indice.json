@@ -12,7 +12,7 @@
   },
   "status": "vigente",
   "error": null,
-  "captured_at": "2026-10-24T14:55:59Z",
+  "captured_at": "2026-10-25T15:06:09Z",
   "observations": [
     {
       "series_id": "ine.ir2023.nacional.indice",
@@ -23,8 +23,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-01-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -36,8 +36,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-02-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -49,8 +49,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-03-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -62,8 +62,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-04-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -75,8 +75,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-05-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -88,8 +88,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-06-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -101,8 +101,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-07-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -114,8 +114,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-08-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -127,8 +127,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-09-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -140,8 +140,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-10-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -153,8 +153,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-11-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -166,8 +166,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2023-12-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -179,8 +179,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-01-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -192,8 +192,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-02-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -205,8 +205,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-03-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -218,8 +218,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-04-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -231,8 +231,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-05-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -244,8 +244,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-06-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -257,8 +257,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-07-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -270,8 +270,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-08-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -283,8 +283,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-09-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -296,8 +296,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-10-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -309,8 +309,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-11-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -322,8 +322,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2024-12-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -335,8 +335,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-01-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -348,8 +348,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-02-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -361,8 +361,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-03-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -374,8 +374,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-04-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -387,8 +387,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-05-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -400,8 +400,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-06-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -413,8 +413,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-07-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -426,8 +426,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-08-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -439,8 +439,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-09-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -452,8 +452,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-10-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -465,8 +465,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-11-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -478,8 +478,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2025-12-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -491,8 +491,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-01-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -504,8 +504,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-02-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -517,8 +517,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-03-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -530,8 +530,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-04-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -543,8 +543,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-05-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -556,8 +556,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-06-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -569,8 +569,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-07-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     },
     {
@@ -582,8 +582,8 @@
         "url": "https://sdmx.ine.gob.cl/rest/data/CL01,DF_IR2023,1.0?startPeriod=2023-01&endPeriod=2026-10"
       },
       "data_date": "2026-08-01",
-      "captured_at": "2026-10-24T14:55:59Z",
-      "raw_hash": "sha256:c8307f87c0bdd0b769ed50b3ad4f82d079531c97cb69ac349ebd3e530d70d90f",
+      "captured_at": "2026-10-25T15:06:09Z",
+      "raw_hash": "sha256:62bd925be281c716983fe49265042d30f9921ffc2fc891810019ad96e661f8c9",
       "status": "vigente"
     }
   ]
